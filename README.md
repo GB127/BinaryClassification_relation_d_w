@@ -12,7 +12,7 @@ Le graphique sera enregistré automatiquement dans le dossier du script sous le 
 # Paramètres:
 
 - list_d:
-    Ce paramètre représente les distances d'intérêt auxquelles nous désirons voir une affichage des distributions. Vous pouvez donner un nombre arbitraire de distances. Cependant, après 8 distances, le résultat sera moins joli.
+    Ce paramètre représente les distances d'intérêt pour lesquelles nous désirons voir une affichage des distributions. Vous pouvez donner un nombre arbitraire de distances. Cependant, après 8 distances, le résultat sera moins joli.
 
     Noter que le code construit le graphique à l'aide des valeurs extrêmes fournies (le minimum et le maximum):
     <table>

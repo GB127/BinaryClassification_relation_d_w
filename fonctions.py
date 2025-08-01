@@ -35,15 +35,15 @@ def build_predictor_SVM(X1:np.ndarray, X2:np.ndarray, C:int=1)->svm.LinearSVC:
         svm.LinearSVC: Prédicteur trouvé
     """
     # Préparation des arguments à fournir pour l'algorithme svm.LinearSVC.
-    X12 = np.vstack((X1, X2))
-    y = np.zeros((X12.shape[0]))
+    X_1_et_2 = np.vstack((X1, X2))
+    y = np.zeros((X_1_et_2.shape[0]))
     y[:X1.shape[0]] = 1
 
     # Application de l'algorithme.
     clf = svm.LinearSVC(C=C, loss="hinge")
     # Ignorer les avertissements ConvergenceWarning
     warnings.filterwarnings("ignore", category=ConvergenceWarning)
-    clf.fit(X12, y)
+    clf.fit(X_1_et_2, y)
     return clf
 
 

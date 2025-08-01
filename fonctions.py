@@ -103,7 +103,7 @@ def build_graph_d_w(list_d:list[int | float], C:float=1, nb_simulation:int=200, 
     # Éliminer les doublons et trier les distances en ordre croissant.
     list_d = sorted(set(list_d))
 
-    # Préparer les valeurs de l'abcisse à utiliser.
+    # Préparer les valeurs de l'abscisse à utiliser.
     all_distances = np.linspace(min(list_d), max(list_d), nb_simulation)
     # Garder en mémoire les distances les plus proches des valeurs spécifiées.
     closest_ds = find_closest_distances(list_d, all_distances)

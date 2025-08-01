@@ -115,8 +115,10 @@ def build_graph_d_w(list_d:list[int | float], C:float=1, nb_simulation:int=200, 
         norm_w = np.linalg.norm(w)
 
         if d not in closest_ds:
+            # Affichage du point sur le graphique
             ax_graph.scatter(d, norm_w, s=5, color="white" if dark_mode else "black", alpha=0.4)
             continue  # On n'a pas besoin d'afficher la distribution à la droite, on passe au suivant.
+
         # Affichage du point sur le graphique.
         ax_graph.scatter(d, norm_w, s=60, marker="*", label=f"d = {round(d, 2)}")
 
